@@ -87,7 +87,7 @@ func createRequestBodyFromConfigs(configs ConfigsModel) ([]byte, error) {
 		},
 		BuildParams: BuildParamsModel{
 			Branch:                   configs.Branch,
-			Tag:                      configs.Tag,
+			Tag:                      &configs.Tag,
 			CommitHash:               configs.CommitHash,
 			CommitMessage:            configs.CommitMessage,
 			WorkflowID:               configs.WorkflowID,
@@ -100,6 +100,10 @@ func createRequestBodyFromConfigs(configs ConfigsModel) ([]byte, error) {
 			BranchRepoOwner:          configs.BranchRepoOwner,
 			BranchDestRepoOwner:      configs.BranchDestRepoOwner,
 		},
+	}
+
+	if *requestModel.BuildParams.Tag == " " || *requestModel.BuildParams.Tag == "" {
+		requestModel.BuildParams.Tag = nil
 	}
 
 	return json.Marshal(requestModel)

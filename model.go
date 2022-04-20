@@ -34,7 +34,7 @@ type HookInfoModel struct {
 // BuildParamsModel ...
 type BuildParamsModel struct {
 	Branch                   string                     `json:"branch"`
-	Tag                      string                     `json:"tag"`
+	Tag                      *string                    `json:"tag,omitempty"`
 	CommitHash               string                     `json:"commit_hash"`
 	CommitMessage            string                     `json:"commit_message"`
 	WorkflowID               string                     `json:"workflow_id"`
