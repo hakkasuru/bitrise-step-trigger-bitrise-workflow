@@ -115,6 +115,7 @@ func createRequest(appSlug string, body []byte) (*http.Request, error) {
 	if request != nil {
 		request.Header.Add("Content-Type", "application/json")
 	}
+	log.Infof("%v", request)
 	return request, err
 }
 

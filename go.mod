@@ -3,8 +3,7 @@ module github.com/hakkasuru/bitrise-step-trigger-bitrise-workflow
 go 1.15
 
 require (
-	github.com/bitrise-io/go-utils v0.0.0-20181112170818-2a09aab8380d
-	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/testify v1.3.0
+	github.com/bitrise-io/go-steputils v1.0.2 // indirect
+	github.com/bitrise-io/go-utils v1.0.2
+	github.com/stretchr/testify v1.7.0
 )
