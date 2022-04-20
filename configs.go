@@ -3,9 +3,10 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/bitrise-io/go-utils/log"
 	"os"
 	"strings"
+
+	"github.com/bitrise-io/go-utils/log"
 )
 
 func createConfigsModelFromEnvs() ConfigsModel {
